@@ -1,0 +1,28 @@
+ {
+     "books": [
+         {
+             "id": "1",
+             "title": "Ghachar Ghochar",
+             "author": "Vivek Shanbagh",
+             "image": "https://images-na.ssl-images-amazon.com/images/I/81EO2maTMML.jpg"
+         },
+         {
+             "id": "2",
+             "title": "Forty Rules of Love",
+             "author": "Elif Shafak",
+             "image": "https://images-na.ssl-images-amazon.com/images/I/91Q4lLuogQL.jpg"
+         },
+         {
+             "id": "3",
+             "title": "Kafka on the Shore",
+             "author": "Haruki Murakami",
+             "image": "https://images-na.ssl-images-amazon.com/images/I/81tdbrewW0L.jpg"
+         },
+         {
+             "id": "4",
+             "title": "Looking for Alaska",
+             "author": "John Green",
+             "image": "https://images-na.ssl-images-amazon.com/images/I/91nTClkODkL.jpg"
+         }
+     ]
+ }
