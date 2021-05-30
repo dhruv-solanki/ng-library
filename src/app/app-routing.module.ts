@@ -6,6 +6,10 @@ import { UpdateBookComponent } from './components/update-book/update-book.compon
 
 const routes: Routes = [
   {
+    path: "",
+    component: ShowBooksComponent,
+  },
+  {
     path: "show",
     component: ShowBooksComponent,
   },
@@ -14,7 +18,7 @@ const routes: Routes = [
     component: AddBookComponent,
   },
   {
-    path: "update",
+    path: "update/:id",
     component: UpdateBookComponent,
   }
 ];

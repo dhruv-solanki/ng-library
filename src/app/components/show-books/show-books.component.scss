@@ -1,0 +1,58 @@
+.book {
+    padding: 10px;
+    text-overflow: clip;
+
+    img {
+        width: 100%;
+        // height: 100%;
+        // box-shadow: 1px 1px gray;
+        border-radius: 5px;
+    }
+    
+    &-img {
+        max-width: 120px; 
+        max-height: 300px;
+    }
+
+    &-title {
+        font-weight: 700;
+        font-size: 16px;
+        // line-height: 1.5em;
+        // height: 3em;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        // white-space: nowrap;
+    }
+
+    &-author {
+        font-style: italic;
+        font-size: 14px;
+    }
+
+    &-status {
+        background-color: lightgreen;
+        // color: whitesmoke;
+        padding: 5px;
+        border-radius: 5px;
+        position: absolute;
+        top: 40%;
+        left: -5px;
+    }
+
+    &-update, &-delete {
+        padding: 10px;
+        color: white;
+    }
+}
+
+.card {
+    background-color: whitesmoke;
+    // max-height: 300px;
+    // color: white;
+    // box-shadow: 1px 1px gray;
+    // border: none;
+
+    &-content {
+        margin-top: 10px;
+    }
+}

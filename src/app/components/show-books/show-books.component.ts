@@ -9,7 +9,8 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class ShowBooksComponent implements OnInit {
 
-  public books = {};
+  public books: any = [];
+  public alert: boolean = false;
 
   constructor(private httpService: HttpService) { }
 
@@ -19,6 +20,29 @@ export class ShowBooksComponent implements OnInit {
     .subscribe(result => {
       this.books = result;
     });
+  }
+
+  // updateBook(id: string) {
+  //   console.log(id);
+  // }
+
+  removeBook(id: string) {
+    this.httpService.deleteBook(id).subscribe((result) => {
+
+      let temp: any = this.books.filter((item: { id: string; }) => {
+        return item.id !== id;
+      });
+      this.books = [];
+      this.books = temp;
+
+      this.alert = true;
+      
+      console.log(result);
+    });
+  }
+
+  closeAlert() {
+    this.alert = false;
   }
 
 }

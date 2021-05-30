@@ -1,1 +1,36 @@
-<p>update-book works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-md-8">
+            <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Update! </strong>Your Data has been updated successfully.
+                <button (click)="closeAlert()" type="button" class="btn-close" data-bs-dismiss="alert" area-label="Close">
+                </button>
+            </div>
+
+            <form [formGroup]="oldBook" class="form-update" (ngSubmit)="editBook()">
+                <div class="form-title">
+                    <h5>Update Book Form</h5>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Title</label>
+                    <input type="text" formControlName="title" class="form-control" placeholder="Book Title">
+                    <span class="error" *ngIf="title.invalid && title.touched">Title is invalid</span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Author</label>
+                    <input type="text" formControlName="author" class="form-control" placeholder="Author Name">
+                    <span class="error" *ngIf="author.invalid && author.touched">Author is invalid</span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Image</label>
+                    <input type="text" formControlName="image" class="form-control" placeholder="Image URL">
+                    <span class="error" *ngIf="image.invalid && image.touched">Image URL is invalid</span>
+                </div>
+                <button type="submit" [disabled]="oldBook.invalid" class="btn btn-warning">Update</button>
+            </form>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
